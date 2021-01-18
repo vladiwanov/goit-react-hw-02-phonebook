@@ -6,8 +6,7 @@ import shortid from 'shortid';
 
 class App extends Component {
   state = {
-    contacts: ['text-1', 'text-2', 'text-3', 'text-4', 'text-5'],
-    // contacts: [],
+    contacts: [],
     name: '',
   };
 
