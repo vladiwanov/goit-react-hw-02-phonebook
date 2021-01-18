@@ -1,0 +1,29 @@
+.form {
+  display: block;
+  text-align: center;
+  margin: auto;
+  width: 300px;
+  border: 1px solid black;
+}
+.input {
+  display: block;
+  text-align: start;
+  margin: 15px auto;
+  width: 150px;
+  height: 30px;
+  font-size: 18px;
+  background-color: lemonchiffon;
+}
+.label {
+  display: block;
+  text-align: center;
+  margin: 20px;
+  font-size: 18px;
+  color: #000;
+}
+
+.button {
+  font-size: 18px;
+  margin: 20px;
+  background-color: lightskyblue;
+}

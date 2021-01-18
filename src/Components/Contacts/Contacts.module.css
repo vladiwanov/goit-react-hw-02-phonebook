@@ -1,0 +1,12 @@
+.contacts {
+  display: block;
+  width: 400px;
+  text-align: center;
+  margin: auto;
+}
+.list {
+  text-align: start;
+  list-style: none;
+  padding: 0;
+  margin-left: 50px;
+}
