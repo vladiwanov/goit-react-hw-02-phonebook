@@ -1,29 +1,35 @@
 .form {
   display: block;
-  text-align: center;
-  margin: auto;
-  width: 300px;
+  text-align: start;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
   border: 1px solid black;
 }
 .input {
   display: block;
   text-align: start;
-  margin: 15px auto;
-  width: 150px;
+  margin-top: 10px;
+  padding: 0;
+  width: 250px;
   height: 30px;
   font-size: 18px;
   background-color: lemonchiffon;
 }
+
 .label {
   display: block;
-  text-align: center;
+  text-align: start;
   margin: 20px;
   font-size: 18px;
   color: #000;
 }
 
 .button {
+  display: block;
+  text-align: start;
   font-size: 18px;
   margin: 20px;
+  padding: 10px;
   background-color: lightskyblue;
 }

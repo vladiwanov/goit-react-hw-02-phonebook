@@ -1,29 +1,35 @@
 import React, { Component } from 'react';
 import shortid from 'shortid';
-import s from './Form.module.css';
+import s from './ContactForm.module.css';
 
 class Form extends Component {
   state = {
     name: '',
+    number: '',
   };
 
   nameInputId = shortid.generate();
-  tagInputId = shortid.generate();
+  numberInputId = shortid.generate();
 
   handleChange = e => {
+    console.log('hgcjcgkuckug', e.currentTarget.value);
     const { name, value } = e.currentTarget;
     this.setState({ [name]: value });
   };
 
   formSubmit = e => {
     e.preventDefault();
+    console.log('что передается: ', e.currentTarget.value);
     console.log(this.state);
-    this.props.onSubmit(this.state.name);
+    console.log('принимается', this.props.contactList);
+    this.props.contactList.find(item => item.name === this.state.name)
+      ? alert(`${this.state.name} is alrady in contacts`)
+      : this.props.onSubmit(this.state);
     this.resetForm();
   };
 
   resetForm = () => {
-    this.setState({ name: '' });
+    this.setState({ name: '', number: '' });
   };
 
   render() {
@@ -38,6 +44,19 @@ class Form extends Component {
               name="name"
               value={this.state.name}
               id={this.nameInputId}
+              placeholder="First Name  Last Name"
+              onChange={this.handleChange}
+            />
+          </label>
+          <label htmlFor={this.numberInputId} className={s.label}>
+            Number
+            <input
+              className={s.input}
+              type="tel"
+              name="number"
+              value={this.state.number}
+              id={this.numberInputId}
+              placeholder="+000 00 000 00 00"
               onChange={this.handleChange}
             />
           </label>

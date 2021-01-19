@@ -1,0 +1,10 @@
+.filter {
+  display: block;
+  text-align: center;
+  margin: auto;
+}
+.input {
+  display: inline-block;
+  text-align: start;
+  margin-left: 20px;
+}
