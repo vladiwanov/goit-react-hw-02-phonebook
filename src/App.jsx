@@ -48,7 +48,6 @@ class App extends Component {
 
   render() {
     const { contacts } = this.state;
-    console.log(this.state);
     return (
       <>
         <h1 className={s.h1}>Phonebook</h1>

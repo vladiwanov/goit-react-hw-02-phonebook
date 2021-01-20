@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import shortid from 'shortid';
 import s from './ContactForm.module.css';
 
-class Form extends Component {
+class ContactForm extends Component {
   state = {
     name: '',
     number: '',
@@ -12,16 +12,12 @@ class Form extends Component {
   numberInputId = shortid.generate();
 
   handleChange = e => {
-    console.log('hgcjcgkuckug', e.currentTarget.value);
     const { name, value } = e.currentTarget;
     this.setState({ [name]: value });
   };
 
   formSubmit = e => {
     e.preventDefault();
-    console.log('что передается: ', e.currentTarget.value);
-    console.log(this.state);
-    console.log('принимается', this.props.contactList);
     this.props.contactList.find(item => item.name === this.state.name)
       ? alert(`${this.state.name} is alrady in contacts`)
       : this.props.onSubmit(this.state);
@@ -73,4 +69,4 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export default ContactForm;
